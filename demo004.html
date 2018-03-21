@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="div">
+			<ol>
+				<li v-for="todo in todos">
+					{{todo.text}}
+				</li>
+			</ol>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/vue.min.js" ></script>
+	<script>
+		var arr = [
+					{'text':'早读'},
+					{'text':'晨跑'},
+					{'text':'早餐'},
+					{'text':'上学'}
+				  ]
+		
+		var app = new Vue({
+			el:'#div',
+			data:{
+				todos:arr
+			}
+		})
+		
+//		var app = new Vue({
+//			el:'#div',
+//			data:{
+//				todos:[
+//						{'text':'早读'},
+//						{'text':'晨跑'},
+//						{'text':'早餐'}
+//					  ]
+//			}
+//		})
+
+	console.log(app.todos[0].text+"")
+	</script>
+</html>

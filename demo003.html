@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		 <p id="p" v-if="seen"> hello, you can see me </p>
+	</body>
+	<script type="text/javascript" src="js/vue.min.js" ></script>
+	<script>
+		//v-if=‘？’ 是可以自己指定的
+		var app = new Vue({
+			el:'#p',
+			data:{
+				seen:true,
+			}
+		})
+	</script>
+</html>
