@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body> 
+		
+		<p id="p" v-html="a">{{a}}</p>
+	</body>
+	<script type="text/javascript" src="js/vue.min.js" ></script>
+	<script> 
+		var vm = new Vue({
+			el:"#p",
+			data:{
+				a: '<span style="color: greenyellow;">hello</span>'
+			} 
+		}) 
+	</script>
+</html>

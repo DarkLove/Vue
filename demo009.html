@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body> 
+	</body>
+	<script type="text/javascript" src="js/vue.min.js" ></script>
+	<script> 
+		var vm = new Vue({
+			el:"#p",
+			data:{
+				a: 2
+			},
+			beforeCreate:function(){
+				console.log("beforeCreate")
+			},
+			created:function(){
+				 // `this` 指向 vm 实例
+				console.log(this.a)
+			} 
+		}) 
+	</script>
+</html>

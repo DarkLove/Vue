@@ -4,5 +4,10 @@ demo003 if 条件
 demo004 for 循环
 demo005 点击事件
 demo006 直观的双向绑定
+demo007 探索data 和 vm 的关系
+demo008 Vue实例暴露的实例属性与方法
+demo009 Vue 部分生命周期
+demo010 输出HTML
+
  
 
