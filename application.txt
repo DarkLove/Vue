@@ -15,4 +15,8 @@ demo014 指令
 demo015 计算属性---基础
 demo016 计算属性缓存 vs 方法
 demo017 计算属性的 setter
+demo018 绑定 HTML Class --- 对象语法
+demo019 绑定 HTML Class --- 数组语法
+
+
 

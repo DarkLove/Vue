@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.a{
+				width: 100px;
+				height: 100px;
+			}
+			
+			.b{
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<div v-bind:class="[class01,class02]"></div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/vue.min.js" ></script>
+	<script>
+		var vm = new Vue({
+			el:"#app",
+			data:{
+				class01:'a',
+				class02:'b'
+			}
+		})
+	</script>
+</html>
