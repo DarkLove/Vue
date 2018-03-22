@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			<!--<span id="span">{{msg}}</span>-->
+			<span id="span" v-once>这个将不会改变: {{ msg }}</span>
+		</div>
+	</body>
+	<!--数据绑定最常见的形式就是使用“Mustache”语法 (双大括号) 的文本插值：
+		通过使用 v-once 指令，你也能执行一次性地插值，就仅仅是一次哦，msg变了文本也不会再改变了
+	-->
+	<script type="text/javascript" src="js/vue.min.js" ></script>
+	<script>
+		var vm = new Vue({
+			el:"#span",
+			data:{msg:'message'}
+		})
+		
+		vm.$data.msg = '11111'
+	</script>
+</html>

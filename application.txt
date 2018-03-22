@@ -8,6 +8,6 @@ demo007 探索data 和 vm 的关系
 demo008 Vue实例暴露的实例属性与方法
 demo009 Vue 部分生命周期
 demo010 输出HTML
-
+demo011 绑定一次文本
  
 
