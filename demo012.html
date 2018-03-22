@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--Mustache 语法不能作用在 HTML 特性上，遇到这种情况应该使用 v-bind 指令：-->
+		<div id="div" >
+			<div v-bind:id="dynamicId">{{msg}}</div>
+		
+			<button v-bind:disabled="isButtonDisabled">Button</button>
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="js/vue.min.js" ></script>
+	<script>
+		var vm = new Vue({
+			el:"#div",
+			data:{
+				dynamicId:'1212',
+				msg:'msg',
+				isButtonDisabled:false
+			}
+		})
+	</script>
+</html>

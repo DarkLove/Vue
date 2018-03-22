@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<a>ssssssss</a>
+			<p v-if="seen">现在你看到我了</p>
+			<a v-bind:href="url">url</a><br/>
+			<a v-on:click="doSomething">doSomething</a><br/>
+			 
+			 <!--阻止html默认时间的调用-->
+			<a v-on:click.prevent="doThis" href="http://cn.vuejs.org/guide/events.html">doThis</a><br/>
+
+		</div>
+	</body>
+	<script type="text/javascript" src="js/vue.min.js" ></script>
+	<script>
+		var vm = new Vue({
+			el:'#app',
+			data:{
+				seen:true,
+				url:'https://www.baidu.com'
+			},
+			methods:{
+				doSomething:function(){
+					alert("GO")
+				},
+				doThis:function(e){
+					alert("prevent")
+				}
+			}
+		})
+	</script>
+</html>

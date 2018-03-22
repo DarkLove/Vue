@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="div">
+			<div>{{msg+100}}</div>
+			<div>{{ok ? 'I AM TRUE' : 'I AM FALSE'}}</div> 
+			<div v-bind:id="'list-' + id"></div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/vue.min.js" ></script>
+	<script>
+		var vm = new Vue({
+			el:"#div",
+			data:{
+				msg:11,
+				ok:false,
+				id:'iamid'
+			}
+		})
+	</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+		  <p>Original message: "{{ message }}"</p>
+		  <p>Computed reversed message: "{{ reversedMessage }}"</p>
+		  <p>{{ reversedMessage }}</p>
+		  <p>{{ reversedMessage }}</p>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/vue.min.js" ></script>
+	<script>
+		var vm = new Vue({
+			el:"#app",
+			data:{
+				message:"Hello Vue !" 
+			},
+			computed:{
+				reversedMessage:function(){
+					return this.message.split('').reverse().join('')
+				}
+			}
+		})
+		console.log(vm.reversedMessage)
+		vm.message = "fuxing"
+		console.log(vm.reversedMessage)
+	</script>
+</html>

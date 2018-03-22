@@ -9,5 +9,10 @@ demo008 Vue实例暴露的实例属性与方法
 demo009 Vue 部分生命周期
 demo010 输出HTML
 demo011 绑定一次文本
- 
+demo012 Mustache 语法不能作用在 HTML 特性上，遇到这种情况应该使用 v-bind 指令：
+demo013 使用 JavaScript 表达式
+demo014 指令
+demo015 计算属性---基础
+demo016 计算属性缓存 vs 方法
+demo017 计算属性的 setter
 
