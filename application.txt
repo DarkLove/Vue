@@ -17,6 +17,10 @@ demo016 计算属性缓存 vs 方法
 demo017 计算属性的 setter
 demo018 绑定 HTML Class --- 对象语法
 demo019 绑定 HTML Class --- 数组语法
+demo020 条件渲染 if else-if else 
+demo021 条件渲染 if else-if else v-show 管理可复用元素
+demo022 列表渲染 ---未完https://cn.vuejs.org/v2/guide/list.html
+demo023 事件处理--部分
 
 
 

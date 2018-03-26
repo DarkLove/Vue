@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<p v-for="item in items">{{item}}</p> 
+			
+			<!--<p v-for="(item,index) in items">{{index}} - {{item}}</p>--> 
+			
+			<button v-on:click="pushtest">pushtest</button>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/vue.min.js" ></script>
+	<script>
+		 var arr = [1,2,3] 
+		 var vm = new Vue({
+		 	el:'#app',
+		 	data:{
+		 		items: arr,
+		 		
+		 		test:{
+		 			name :"fx"
+		 		}
+		 	},
+		 	methods:{
+		 		pushtest:function(){
+		 			this.items.push(this.items[this.items.length-1]+1)
+		 		}
+		 	}
+		 })
+		 
+//		 vm.items[0] = 999;
+//vm.$set 实例方法，该方法是全局方法 Vue.set 的一个别名：
+		 vm.$set(vm.items,0,999);
+		 Vue.set(vm.items,1,998)
+		 
+		 vm.$set(vm.test,"age",23);//直接在加在data中好像不行
+		 
+		 console.log(JSON.stringify(vm.test))
+		 
+	</script>
+</html>

@@ -8,6 +8,41 @@
 		<div id="app">
 			<h1 v-if="ok">Yes</h1>
 			<h1 v-else>No</h1>
+			
+			<template v-if="ok2">
+				  <h1>Title</h1>
+				  <p>Paragraph 1</p>
+				  <p>Paragraph 2</p>
+			</template>
+			
+			
+			<div v-if="type === 'A'">
+			  A
+			</div>
+			<div v-else-if="type === 'B'">
+			  B
+			</div>
+			<div v-else-if="type === 'C'">
+			  C
+			</div>
+			<div v-else>
+			  Not A/B/C
+			</div>
+			
+			
+			<div v-if="name === '符幸'">
+				<h5>符幸</h5>
+			</div>
+			<div v-else-if="name === '张'">
+				<h5>张</h5>
+			</div>
+			<div v-else-if="name === '晚'">
+				<h5>晚</h5>
+			</div>
+			<div v-else>
+				<h5>aaa</h5>
+			</div>
+			
 		</div>
 	</body>
 	<script type="text/javascript" src="js/vue.min.js" ></script>
@@ -15,7 +50,13 @@
 		var vm = new Vue({
 			el:"#app",
 			data:{
-				ok:false
+				ok:false,
+				
+				ok2:false,
+				
+				type:'C',
+				
+				name:'a'
 			}
 		})
 	</script>

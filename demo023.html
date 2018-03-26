@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			button{
+				display: list-item;	
+				margin: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="app">
+			<button v-on:click="fun1">1</button>
+			<button v-on:click="fun2('2')">2</button>
+			<a href="https://www.baidu.com" v-on:click="fun3('3', $event)">3</a>
+			
+			<!--
+            	作者：2901294499@qq.com
+            	时间：2018-03-26
+            	描述：v-on:click.stop 阻止事件冒泡
+            -->
+			<div v-on:click="fun4" style="width: 200px;height: 200px; background: red; margin-top: 50px;">
+				<p v-on:click.stop="fun5" style="width: 50px;height: 50px; background: yellow;">5</p>
+			</div>
+			
+			<!--
+	        	作者：2901294499@qq.com
+	        	时间：2018-03-26
+	        	描述：点击事件将只会触发一次 
+	        -->
+			<button v-on:click.once="fun6">6</button>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/vue.min.js" ></script>
+	<script>
+		var vm = new Vue({
+			el:'#app',
+			data:{},
+			methods:{
+				fun1:function(){
+					alert("fun1")
+				},
+				fun2:function(p){
+					alert(p)
+				},
+				fun3:function(message,event){
+					 // 现在我们可以访问原生事件对象
+				    if (event) event.preventDefault()//取消事件的默认动作。 阻止了a标签的跳转	
+				    alert(message)
+				},
+				fun4:function(){
+					console.log("fun4")
+				},
+				fun5:function(){
+					console.log("fun5")
+				},
+				fun6:function(){
+					console.log("fun6")
+				}
+			}
+		})
+		
+	</script>
+</html>
