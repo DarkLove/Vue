@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<child msg='hello'></child>
+		</div>
+		
+		<a href="https://blog.csdn.net/u013142781/article/details/50830754" target="_blank">小宝鸽csdn<a/>
+	</body>
+	<script type="text/javascript" src="js/vue.min.js" ></script>
+	<script>
+		
+		Vue.component('child',{
+			props:['msg'],
+			template:"<span>{{msg}}</span>"
+		})
+		
+		new Vue({
+			el:"#app"
+		})
+	</script>
+</html>

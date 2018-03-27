@@ -21,6 +21,9 @@ demo020 条件渲染 if else-if else
 demo021 条件渲染 if else-if else v-show 管理可复用元素
 demo022 列表渲染 ---未完https://cn.vuejs.org/v2/guide/list.html
 demo023 事件处理--部分
+demo024 表单的输入绑定--部分
+demo025 组件1--部分
+demo026 组件2--部分
 
 
 
